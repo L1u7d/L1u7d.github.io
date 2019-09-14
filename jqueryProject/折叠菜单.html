@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>折叠菜单</title>
+	<script src="https://code.jquery.com/jquery-1.12.4.js"
+  	integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU="
+  	crossorigin="anonymous"></script>
+  	<style>
+  		*{
+  			margin: 0;
+  			padding: 0;
+  		}
+  		.list{
+  			width: 300px;
+  			margin: 100px auto;
+  			list-style: none;
+  		}
+  		.list li{
+  			border: 1px solid black;
+  			line-height: 35px;
+  			border-bottom: none;
+  			text-indent: 2em;
+  		}
+  		.list>li:last-child{
+  			border-bottom: 1px solid black;
+  			border-bottom-right-radius: 10px;
+			border-bottom-left-radius: 10px;
+  		}	
+  		.list>li:first-child{
+  			border-top-right-radius: 10px;
+			border-top-left-radius: 10px;
+  		}
+  		.nav{
+  			display: none;
+  		}
+  		.nav li{
+  			list-style: none;
+  			background-color: purple;
+  			border-bottom: 1px solid white;
+  			
+  		}
+  		.nav li:hover{
+  			background: red;
+  		}	
+  	</style>
+  	<script>
+  		$(function(){
+  			$(".list>li").click(function() {
+  				$(this).children('.nav').slideDown(1000);
+  				$(this).siblings().children(".nav").slideUp(1000);
+  				//$ch.slideDown(1000);
+  				//$ch.slideUp(1000);
+  			
+  			});
+  		})
+  	</script>
+</head>
+<body>
+	
+		<ul class="list">
+			<li class="current">一级菜单
+				<ul class="nav">
+					<li>二级菜单</li>
+					<li>二级菜单</li>
+					<li>二级菜单</li>
+					<li>二级菜单</li>
+				</ul>
+			</li>
+			<li>一级菜单
+			<ul class="nav">
+					<li>二级菜单</li>
+					<li>二级菜单</li>
+					<li>二级菜单</li>
+					<li>二级菜单</li>
+				</ul></li>
+			<li>一级菜单
+			<ul class="nav">
+					<li>二级菜单</li>
+					<li>二级菜单</li>
+					<li>二级菜单</li>
+					<li>二级菜单</li>
+				</ul></li>
+			<li>一级菜单
+			<ul class="nav">
+					<li>二级菜单</li>
+					<li>二级菜单</li>
+					<li>二级菜单</li>
+					<li>二级菜单</li>
+				</ul></li>
+			<li>一级菜单
+			<ul class="nav">
+					<li>二级菜单</li>
+					<li>二级菜单</li>
+					<li>二级菜单</li>
+					<li>二级菜单</li>
+				</ul></li>
+		</ul>
+	
+</body>
+</html>

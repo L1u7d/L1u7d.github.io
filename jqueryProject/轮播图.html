@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>轮播图</title>
+	<script src="https://code.jquery.com/jquery-1.12.4.js"
+  	integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU="
+  	crossorigin="anonymous"></script>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		div{
+			width: 520px;
+			height: 280px;
+			border: 1px solid black;
+			margin: 100px auto;
+			overflow: hidden;
+		}
+		ul{
+			width: 1560px;
+			height: 280px;
+			/* background: rgb(0, 0, 250); */
+			list-style: none;
+		}
+		li{
+			float: left;
+		}
+		
+	</style>
+	<script>
+		$(function(){
+			//保存偏移量
+			var ind = 0;
+			//让图片滚动起来
+			var timer;
+			function doGo(){
+				timer = setInterval(function(){					
+					ind += -10;
+					if(ind <= -1050){
+						ind = 0;
+					}
+					$("ul").css("marginLeft",ind)
+				},50);
+			};
+			doGo();
+			$("li").hover(function() {
+				clearInterval(timer);
+			}, function() {
+				doGo();
+			});
+			
+		})
+	</script>
+</head>
+<body>
+	<div>
+		<ul>
+			<li><img src="images/1.jpg" alt=""></li>
+			<li><img src="images/2.jpg" alt=""></li>
+			<li><img src="images/1.jpg" alt=""></li>
+		</ul>
+	</div>
+</body>
+</html>
