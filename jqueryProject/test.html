@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>测试</title>
+	<script src="njQuery.js"></script>
+	<script>
+		// console.log($("     <div><p>1</p></div><p>1</p>    "));
+		// window.onload = function(){
+		// 	// console.log($("li"));
+		// 	// console.log($([0,1,2,3,4]));
+		// 	// console.log($({0:"lu",1:"qing",length:2}));
+		// 	// console.log($(window));
+		// 	var arr = [1,32,4,5,5];
+		// 	var obj = {0:"ddd",1:"ll",2:"dd",length:3};
+		// 	// console.log({}.toString.apply(arr));
+		// 	// console.log({}.toString.apply(obj));
+		// 	console.log($(arr));
+		// 	console.log($(obj));
+		// 	function person(){};
+		// 	console.log($(new person()));
+		// 	console.log($(document.createElement("div")));
+		// 	console.log($(123));
+		// }
+		$(function(){
+			// var res = $("li");
+			// console.log(res.first());
+			// console.log(res.last());
+			var arr = [1,2,3,4,5,6];
+			var obj = {0:"ll",1:"33",2:"dd",length:3};
+			var obj1 = {"name":"jj","age":"33"};
+			// njQuery.each(obj1,function(key, value){
+			// 	if (key === 1) {
+			// 		return false;
+			// 	}
+			// 	// console.log(key, value);
+			// 	console.log(this);
+			// });
+			// $(arr).each(function(key,value){
+			// 	console.log(this);
+			// })
+			var res = njQuery.map(arr,function(value,key){
+				if (key === 2) {
+					return value;
+				}
+			});
+			console.log(res);
+		});
+		
+	</script>
+</head>
+<body>
+	<ul>
+		<li id="li1">1</li>
+		<li id="li2">2</li>
+		<li id="li3">3</li>
+		<li id="li4">4</li>
+	</ul>
+	<script>
+		// var arr = [1,3,4];
+		// var obj = {};
+		// [].push.apply(obj,arr);
+		// console.log(obj);
+		// var arr=[];
+		// var obj={0:"hao",1:"liu",2:"qing",3:"dong",length:4};
+		// [].push.apply(arr,obj);
+		// console.log(arr);
+	</script>
+</body>
+</html>
