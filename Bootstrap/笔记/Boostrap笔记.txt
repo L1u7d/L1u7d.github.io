@@ -1,0 +1,17 @@
+BoostStrap笔记
+	移动设备优先
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		width:控制设备的宽度
+		initial-scale=1:确保网页加载时，以1:1的比例呈现，不会有任何的缩放
+		user-scalable=no 可以禁用其缩放，与maximum-scale=1.0一起使用。
+	相应式图像：
+		<img src="..." class="img-responsive" alt="响应式图像">
+		添加img-responsive类。
+			.img-responsive {
+				display: block;
+				height: auto;
+				max-width: 100%;
+			}
+		注意：如果想要图片居中，使用.center-block类，而不是.text-center。
+		
+	这不是我想要的号码，你给不了该包吧
