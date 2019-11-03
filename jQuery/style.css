@@ -1,0 +1,45 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+.box {
+	width: 300px;
+	height: 450px;
+	margin: 50px auto;
+	border: 1px solid black;
+}
+h1 {
+	font-size: 20px;
+	line-height: 35px;
+	color: deeppink;
+	padding-left: 10px;
+	border-bottom: 1px dashed #ccc;
+}
+ul li {
+	list-style: none;
+	padding: 5px 10px;
+	border: 1px dashed #ccc;
+}
+ul li:nth-child(-n+3) span{
+	background-color: deeppink;
+}
+ul li span {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	background-color: #ccc;
+	text-align: center;
+	line-height: 20px;
+	margin-right: 10px;
+}
+.content{
+	overflow: hidden;
+	display: none;
+}
+.content p{
+	width: 180px;
+	height: 120px;
+}
+.current .content{
+	display: block;
+}

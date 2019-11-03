@@ -1,0 +1,29 @@
+[
+	{
+		"name":"三个人的错",
+		"singer":"王菀之",
+		"album":"因为爱情有多美",
+		"time":"04:55",
+		"link_url":"./source/三个人的错.mp3",
+		"cover":"./source/三个人的错.jpg",
+		"link_lrc":"./source/三个人的错.txt"
+	},
+	{
+		"name":"木偶人",
+		"singer":"薛之谦",
+		"album":"尘",
+		"time":"04:46",
+		"link_url":"./source/木偶人.mp3",
+		"cover":"./source/木偶人.jpg",
+		"link_lrc":"./source/木偶人.txt"
+	},
+	{
+		"name":"安宁",
+		"singer":"孙燕姿",
+		"album":"逆光",
+		"time":"03:17",
+		"link_url":"./source/安宁.mp3",
+		"cover":"./source/安宁.jpg",
+		"link_lrc":"./source/安宁.txt"
+	}
+]

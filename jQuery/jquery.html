@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>电影排行榜</title>
+	<link rel="stylesheet" href="style.css">
+	<script
+  src="https://code.jquery.com/jquery-1.12.4.js"
+  integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU="
+  crossorigin="anonymous"></script>
+  <script>
+  	$(function(){
+  		$("li").hover(function() {
+  			$(this).addClass('current');
+  		}, function() {
+  			$(this).removeClass('current');
+  		});	
+  	})
+  </script>
+</head>
+<body>
+	<div class="box">
+		<h1>电影排行榜</h1>
+		<ul>
+			<li><span>1</span>第一个电影
+				<div class="content">
+					<p>ssssssssdsdsssssssddd
+					ddddddddddddddddddddd
+					ddddddddddddddddddddddd
+					dddddddddddd</p>
+				</div>
+			</li>
+			<li><span>2</span>第二个电影
+			<div class="content">
+					<p>ssssssssdsdsssssssddd
+					ddddddddddddddddddddd
+					ddddddddddddddddddddddd
+					dddddddddddd</p>
+				</div></li>
+			<li><span>3</span>第三个电影
+			<div class="content">
+					<p>ssssssssdsdsssssssddd
+					ddddddddddddddddddddd
+					ddddddddddddddddddddddd
+					dddddddddddd</p>
+				</div></li>
+			<li><span>4</span>第四个电影
+			<div class="content">
+					<p>ssssssssdsdsssssssddd
+					ddddddddddddddddddddd
+					ddddddddddddddddddddddd
+					dddddddddddd</p>
+				</div></li>
+			<li><span>5</span>第五个电影
+			<div class="content">
+					<p>ssssssssdsdsssssssddd
+					ddddddddddddddddddddd
+					ddddddddddddddddddddddd
+					dddddddddddd</p>
+				</div></li>
+		</ul>
+	</div>
+</body>
+</html>
