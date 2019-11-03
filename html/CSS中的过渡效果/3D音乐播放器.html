@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>3D播放器</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		body{
+			background: url('images/vae/va.jpg') no-repeat;
+			background-size: cover;
+			overflow: hidden;
+		}
+		ul{
+			width: 200px;
+			height: 200px;
+			/* border: 1px solid black; */
+			position: absolute;
+			bottom: 100px;
+			left: 60%;
+			transform-style: preserve-3d;
+			transform: rotateX(-10deg);
+			animation: move 10s linear 0s infinite;
+		}
+		@keyframes move{
+			from {
+				transform: rotateX(-5deg) rotateY(0deg);
+			}
+			to {
+				transform: rotateX(-5deg) rotateY(360deg);
+			}
+		}
+		ul li{
+			list-style: none;
+			width: 200px;
+			height: 200px;
+			position: absolute;
+			left: 0;
+			top: 0;
+			border: 5px solid skyblue;
+		}
+		ul:hover{
+			animation-play-state: paused;
+		}
+		ul li:nth-child(1){
+			transform: rotateY(60deg) translateZ(200px);
+		}
+		ul li:nth-child(2){
+			transform: rotateY(120deg) translateZ(200px);
+		}
+		ul li:nth-child(3){
+			transform: rotateY(180deg) translateZ(200px);
+		}
+		ul li:nth-child(4){
+			transform: rotateY(240deg) translateZ(200px);
+		}
+		ul li:nth-child(5){
+			transform: rotateY(300deg) translateZ(200px);
+		}
+		ul li:nth-child(6){
+			transform: rotateY(360deg) translateZ(200px);
+		}
+		ul li img{
+			width: 200px;
+			height: 200px;
+		}
+	</style>
+</head>
+<body>
+	<ul>
+		<li><img src="images/vae/vae1.jpg" alt=""></li>
+		<li><img src="images/vae/vae2.jpg" alt=""></li>
+		<li><img src="images/vae/vae3.jpg" alt=""></li>
+		<li><img src="images/vae/vae4.jpg" alt=""></li>
+		<li><img src="images/vae/vae5.jpg" alt=""></li>
+		<li><img src="images/vae/vae6.jpg" alt=""></li>
+	</ul>
+</html>

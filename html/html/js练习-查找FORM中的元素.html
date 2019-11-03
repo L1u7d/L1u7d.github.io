@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>查找Form中的元素</title>
+</head>
+<body>
+	<p>查找From中的元素</p>
+	<form id="frm1">
+		FirstName: <input type="text" name="fname" value="liu">
+		LastName: <input type="text" name="lname" value="qingdong">
+
+	</form>
+	<p>点击“试试”按钮，将显示所有from元素信息</p>
+	<button type="button" onclick="myFunction()">试试</button>
+	<p id="demo"></p>
+	<script type="text/javascript">
+		function myFunction() {
+			var x = document.forms["frm1"];
+			var t = "";
+			var i;
+			for (i = 0; i < x.length; i++){
+				t += x.elements[i].value+"<br>";
+			}
+			document.getElementById("demo").innerHTML = t;
+		}
+	</script>
+</body>
+</html>

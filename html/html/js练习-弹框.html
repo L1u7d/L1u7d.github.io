@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>弹框</title>
+</head>
+<body>
+	<button onclick="myFunction()">点击</button>
+	<p id="demo"></p>
+	<script type="text/javascript">
+		function myFunction() {
+			var t;
+			if (confirm("请选择")) {
+				t = "你选择了确认";
+			} else {
+				t = "你选择了取消";
+			}
+			document.getElementById("demo").innerHTML = t;
+		}
+	</script>
+</body>
+</html>

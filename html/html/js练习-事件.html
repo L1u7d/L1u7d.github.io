@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>js中的事件</title>
+</head>
+<body>
+	<h1 onclick="this.innerHTML='我很好'">你好吗</h1>
+	<button id="btn">点击我</button>
+	<p id="demo"></p>
+	<script type="text/javascript">
+		document.getElementById("btn").onclick = myDisplay;
+		function myDisplay(){
+			document.getElementById("demo").innerHTML = Date();
+		}
+	</script>
+</body>
+</html>

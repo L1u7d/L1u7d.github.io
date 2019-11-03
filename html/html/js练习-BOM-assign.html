@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>assign方法</title>
+</head>
+<body>
+	<p id="demo"></p>
+	<input type="button" value="前往百度" onclick="myAssign()">
+	<script type="text/javascript">
+		function myAssign() {
+			window.location.assign("http://www.baidu.com");
+		}
+		document.getElementById("demo").innerHTML = navigator.language+"<br>"+
+		navigator.onLine;
+	</script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>计时器</title>
+
+</head>
+<body>
+	<p>创建一个计时器</p>
+	<p id="demo"></p>
+
+	<script type="text/javascript">
+		var obj = {
+			counter: 0,
+			get reset(){
+				this.counter = 0;
+			},
+			get increment(){
+				this.counter++;
+			},
+			get decrement(){
+				this.counter--;
+			},
+			set add(value){
+				this.counter+=value;
+			},
+			set sub(value){
+				this.counter-=value;
+			}
+		};
+		obj.reset;
+		obj.increment;
+		obj.decrement;
+		obj.add=5;
+		document.getElementById("demo").innerHTML=obj.counter;
+
+
+	</script>
+</body>
+</html>

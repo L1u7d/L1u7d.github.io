@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>北京大学网页布局二
+	</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.mb10{
+			margin-bottom: 10px;
+		}
+		.mb8{
+			margin-bottom: 8px;
+		}
+		.mr10{
+			margin-right: 10px;
+		}
+		.h10{
+			height: 10px;
+		}
+		.cl{
+			clear: both;
+		}
+		.header{
+			overflow: hidden;
+			width: 970px;
+			height: 103px;
+			margin: 0 auto;
+		}
+		.header .logo{
+			float: left;
+			width: 277px;
+			height: 103px;
+			background: red;
+		}
+		.header .lang{
+			float: right;
+			width: 137px;
+			height: 49px;
+			background: lightgreen;
+		}
+		.header .nav{
+			float: right;
+			width: 679px;
+			height: 46px;
+			background: lightgreen;
+		}
+		.content{
+			overflow: hidden;
+			width: 970px;
+			height: 435px;
+			margin: 0 auto;
+		}
+		.content .side{
+			float: left;
+			width: 310px;
+			height: 435px;
+			background: yellow;
+		}
+		.content .main{
+			float: left;
+			width: 450px;
+			height: 401px;
+			
+		}
+		.content .main .main_top{
+			height: 240px;
+			background: skyblue;
+		}
+		.content .main .main_mid{
+			height: 110px;
+			background: skyblue;
+		}
+		.content .main_bottom{
+			height: 30px;
+			background: skyblue;
+		}
+		.content .m_nav{
+			float: left;
+			width: 190px;
+			height: 401px;
+			background: purple;
+		}
+		.content .bottom{
+			float: left;
+			width: 650px;
+			height: 25px;
+			background: blue;
+		}
+		.footer{
+			width: 970px;
+			height: 35px;
+			margin: 0 auto;
+			background: blue;
+		}
+	</style>
+</head>
+<body>
+	<div class="header">
+		<div class="logo"></div>
+		<div class="lang mb8"></div>
+		<div class="nav"></div>
+	</div>
+	<div class="cl h10"></div>
+	<div class="content">
+		<div class="side mr10"></div>
+		<div class="main mr10 mb10">
+			<div class="main_top mb10"></div>
+			<div class="main_mid mb10"></div>
+			<div class="main_bottom"></div>
+		</div>
+		<div class="m_nav"></div>
+		<div class="bottom"></div>
+	</div>
+	<div class="cl h10"></div>
+	<div class="footer">
+	</div>
+</body>
+</html>

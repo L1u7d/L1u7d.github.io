@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>onchange事件</title>
+	<script type="text/javascript">
+		function myChange(){
+			var t = document.getElementById("fname");
+			t.value = t.value.toUpperCase();
+			document.getElementById("demo").innerHTML = "输入框内容变为大写";
+		}
+	</script>
+</head>
+<body>
+	请输入您的名字：<input type="text" id="fname" onchange="myChange()">
+	<p id="demo"></p>
+</body>
+</html>

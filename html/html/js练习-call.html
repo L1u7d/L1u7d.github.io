@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>call方法</title>
+</head>
+<body>
+	<p>展示call方法</p>
+	<p id="demo"></p>
+	<button type="button" onclick="">点击</button>
+
+	<script type="text/javascript">
+		var person = {
+			fullName: function() {
+				return this.firstName+" "+this.lastName;
+			}
+		};
+		var person1 = {
+			firstName: "liu",
+			lastName: "qingdong"
+		};
+		var x = person.fullName.call(person1);
+		document.getElementById("demo").innerHTML=x;
+
+	</script>
+</body>
+</html>

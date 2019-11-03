@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JSON存储</title>
+</head>
+<body>
+	<p id="demo"></p>
+	<script type="text/javascript">
+		var obj = {"Name":"liuqingdong","Age":24,"City":"LinYi"};
+		var json1 = JSON.stringify(obj);
+		localStorage.setItem("item1",json1);
+		var text = localStorage.getItem("item1");
+		var obj2 = JSON.parse(text);
+		document.getElementById("demo").innerHTML = obj2.Name;
+	</script>
+</body>
+</html>

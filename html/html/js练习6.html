@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>验证输入</title>
+
+</head>
+<body>
+	<p>请输入1-10之间的数:</p>
+	<input type="text" id="input" required>
+	<button type="button" onclick="myFunction1()">验证</button>
+	<p id="demo"></p>
+
+	<script type="text/javascript">
+		function myFunction1() {
+			var x,text;
+			x = document.getElementById("input").value;
+			if (isNaN(x) || x < 1 || x > 10) {
+				alert("输入错误");
+				text = "输入有误！";
+			} else{
+				text = "输入无误";
+			}
+			document.getElementById("demo").innerHTML = text;
+		}
+	</script>
+</body>
+</html>

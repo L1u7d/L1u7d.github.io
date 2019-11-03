@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DOM</title>
+</head>
+<body>
+	<p>n你好</p>
+	<p>我很好</p>
+	<p id="demo"></p>
+	<script type="text/javascript">
+		var x=document.getElementsByTagName("p");
+		document.getElementById("demo").innerHTML=
+		x[0].innerHTML+"  "+x[1].innerHTML;
+	</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>验证输入的内容：</title>
+</head>
+<body>
+	<p>请输入5-10之间的数字：</p>
+	<input type="text" id="input" >
+	<button type="button" onclick="myFunction()">测试</button>
+	<p id="demo"></p>
+
+	<script type="text/javascript">
+		"use strict"
+		function myFunction(){
+			var message,x;
+			message=document.getElementById("demo");
+			message.innerHTML="";
+			x=document.getElementById("input").value;
+			try{
+				if(x == "") throw "数值为空";
+				if(isNaN(x)) throw "不是数字";
+					x=Number(x);
+				if (x<=5) throw "数字太小";
+				if (x>10) throw "数字太大";
+			}
+			catch(err){
+				message.innerHTML="输入"+err;
+			}
+		}
+
+	</script>
+</body>
+</html>

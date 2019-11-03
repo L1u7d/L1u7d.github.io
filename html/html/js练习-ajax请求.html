@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>AJAX请求</title>
+</head>
+<body>
+	<p>更改文本</p>
+	<p id="demo">hao</p>
+	<button onclick="myFunction()">点击</button>
+	<script type="text/javascript">
+		function myFunction() {
+			var xml = new XMLHttpRequest();
+			xml.onreadystatechange=function(){
+				if (this.readyState==4 && this.status==200) {
+					document.getElementById("demo").innerHTML = xml.responseText;
+				}
+			};
+			xml.open("GET","1.txt",true);
+			xml.send();
+		}
+	</script>
+</body>
+</html>

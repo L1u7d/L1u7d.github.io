@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>js练习</title>
+</head>
+<body>
+	<p id="demo"></p>
+
+	<script type="text/javascript">
+		var text = '{"employess":['+
+		'{"firstName":"liu","lastName":"qingdong"},'+
+		'{"firstName":"liu","lastName":"qingshan"}]}';
+		obj=JSON.parse(text);
+		document.getElementById("demo").innerHTML=
+		obj.employess[1].firstName+"  "+obj.employess[0].lastName;
+	</script>
+</body>
+</html>

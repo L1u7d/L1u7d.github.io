@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>rangeOverflow</title>
+</head>
+<body>
+	<p>rangeOverflow属性使用</p>
+	<input id="input" max="100" type="number"></input>
+	<button type="button" onclick="myFunction()">验证</button>
+	<p id="demo"></p>
+
+	<script type="text/javascript">
+		function myFunction() {
+			var x;
+			if (document.getElementById("input").validity.rangeOverflow) {
+				x = "输入的值太大";
+			} else {
+				x = "值在可接受范围内";
+			}
+			document.getElementById("demo").innerHTML = x;
+		}
+
+	</script>
+</body>
+</html>

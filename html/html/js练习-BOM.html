@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>BOM</title>
+</head>
+<body>
+	<p id="demo"></p>
+	<p id="p1"></p>
+	<script type="text/javascript">
+		document.getElementById("demo").innerHTML = screen.width+"  "+screen.height
+		+"  "+screen.availWidth;;
+		document.getElementById("p1").innerHTML = window.location.href+"<br>"+
+		window.location.hostname+"<br>"+window.location.protocol;
+	</script>
+</body>
+</html>

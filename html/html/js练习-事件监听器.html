@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>事件监听器</title>
+	
+</head>
+<body>
+	<p>演示事件监听器的效果</p>
+	<button id="btn">点击</button>
+	<p id="demo"></p>
+
+	<script type="text/javascript">
+		//document.getElementById("btn").addEventListener("click",myLister);
+		document.getElementById("btn").addEventListener("click",myLister);
+		function myLister(){
+			document.getElementById("demo").innerHTML="jjjjj";
+		}
+		window.addEventListener("resize",function(){alert("窗口大小改变了");});
+	</script>
+</body>
+</html>

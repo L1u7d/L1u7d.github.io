@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>有效输入验证</title>
+</head>
+<body>
+	<p>请按照要求输入有效字段（100-300)之间的数字</p>
+	<input type="number" id="input" min="100" max="300" required>
+	<button type="button" onclick="myFunction()">验证</button>
+	<p id="demo"></p>
+
+	<script type="text/javascript">
+		function myFunction() {
+			var x;
+			x = document.getElementById("input");
+			if (!x.checkValidity()) {
+				document.getElementById("demo").innerHTML = x.validationMessage;
+			} else {
+				document.getElementById("demo").innerHTML = "good!";
+			}
+		}
+
+	</script>
+</body>
+</html>

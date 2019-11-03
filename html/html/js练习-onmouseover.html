@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>鼠标事件</title>
+	<style type="text/css">
+		div{
+			width: 400px;
+			height: 400px;
+			background: blue;
+			padding: 20px;
+		}
+	</style>
+	<script type="text/javascript">
+		function mouseOver(obj){
+			obj.innerHTML="你把鼠标移动上来了";
+		}
+		function mouseOut(obj){
+			obj.innerHTML = "你把鼠标移走了";
+		}
+	</script>
+</head>
+<body>
+	<p>将鼠标移动到下面看看吧</p>
+	<div onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" >我会发生变化哟</div>
+</body>
+</html>

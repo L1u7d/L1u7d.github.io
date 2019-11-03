@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>xml演示</title>
+	<style type="text/css">
+		table,th,td {
+		  border : 1px solid black;
+		  border-collapse: collapse;
+		}
+		th,td {
+		  padding: 5px;
+		}
+	</style>
+</head>
+<body>
+	<h1>XMLHttpRequest对象</h1>
+	<button type="button" onclick="loadDoc()">获取音乐列表</button>
+	<table id="demo"></table>
+	<script type="text/javascript">
+		function loadDoc(){
+			var xml = new XMLHttpRequest();
+			xml.onreadystatechange = function(){
+				if (this.readyState==4 && this.status==200) {
+					myFunction(this);
+				}
+			};
+		xml.open("GET","/music_list.xml",true);
+		xml.send();
+		}
+		function myFunction(xml1){
+			var i;
+			var x = xml1.responseXML;
+			var table="<tr><th>艺术家</th><th>曲目</th></tr>";
+			var y = x.getElementsByTagName("TRACK");
+			for (i=0;i<y.length;i++) {
+				table+="<tr><th>"+y[i].getElementsByTagName("ARTIST")[0].childNodes.nodeValue+
+				"</th><th>"+y[i].getElementsByTagName("TITLE")[0].childNodes.nodeValue+"</th></tr>"
+			}
+			document.getElementById("demo").innerHTML = table;
+		}
+	</script>
+</body>
+</html>

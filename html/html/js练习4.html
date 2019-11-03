@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>js练习</title>
+</head>
+<body>
+	<p id="demo"></p>
+
+	<script type="text/javascript">
+		var person1={
+			fullName : function(){
+				return this.firstName+"  "+this.lastName;
+			}
+		}
+
+		var person2={
+			firstName : "liu",
+			lastName : "qingdong"
+		}
+		var x=person1.fullName.call(person2);
+		document.getElementById("demo").innerHTML=x;
+	</script>
+</body>
+</html>

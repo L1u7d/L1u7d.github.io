@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>onload</title>
+</head>
+<body onload="myOnload()" onunload="document.getElementById('d1').innerHTML='我关闭了'">
+	<p id="demo"></p>
+	<p id="d1"></p>
+	<script type="text/javascript">
+		function myOnload(){
+			var x = "";
+			if (navigator.cookieEnabled==true) {
+				x = "cookie已经启动";
+			} else {
+				x = "cookie没有启动";
+			}
+			document.getElementById("demo").innerHTML = x;
+		}
+	</script>
+</body>
+</html>
