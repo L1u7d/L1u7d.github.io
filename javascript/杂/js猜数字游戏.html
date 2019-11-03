@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+	<html lang="zh-CN">
+<head>
+	<meta charset="utf-8">
+	<title>猜数字游戏</title>
+	<style>
+		html {
+			font-family: sans-serif
+		}
+	body {
+		width: 50%;
+		max-width: 800px;
+		min-width: 480px;
+		margin: 0 auto
+		}
+	.lastResult {
+		color: white;
+		padding: 3px
+		}
+	</style>
+</head>
+<body>
+	<h1>猜数字游戏</h1>
+	<p>我刚才随机选定了一个100以内的自然数。看你能否在 10 次以内猜中它。每次我都会告诉你所猜的结果是高了还是低了。</p>
+	<div class="form">
+		<label for="guessField">请猜数: </label>
+		<input type="text" id="guessField" class="guessField">
+		<input type="submit" value="确定" class="guessSubmit">
+	</div>
+	<div class="resultParas">
+		<p class="guesses"></p>
+		<p class="lastResult"></p>
+		<p class="lowOrHi"></p>
+	</div>
+	<script>
+	// 开始编写 JavaScript 代码
+		//生成100以内的随机数
+		let randomNumber = Math.floor(Math.random()*100)+1;
+		//获取p标签的引用
+		const guesses = document.querySelector(".guesses");
+		const lastResult = document.querySelector(".lastResult");
+		const lowOrHi = document.querySelector(".lowOrHi");
+		//获取form里面input的引用
+		const guessField = document.querySelector(".guessField");
+		const guessSubmit = document.querySelector(".guessSubmit");
+		//定义猜测次数
+		let guessCount = 1;
+		//定义重新开始按钮
+		let resetButton;
+		//定义检查判断函数
+		function checkGuess() {
+			//获取用户输入的数
+			let uesrNumber = Number(guessField.value);
+			//判断输入的数是否为第一次输入，是的话，添加“上次输入的数”
+			if (guessCount === 1) {
+				guesses.textContent = "上次猜的的数：";
+			}
+			guesses.textContent += uesrNumber+" ";
+			//判断猜测结果应执行相应程序
+			if (uesrNumber == randomNumber) {
+				lastResult.textContent = "恭喜你猜对了！";
+				lastResult.style.backgroundColor = "green";
+				lowOrHi.textContent = "";
+				setGameOver();
+			} else if (guessCount == 10) {
+				lastResult.textContent = "次数用尽！";
+				setGameOver();
+			} else {
+				lastResult.textContent = "猜错了！";
+				lastResult.style.backgroundColor = "red";
+				if (uesrNumber < randomNumber) {
+					lowOrHi.textContent = "你猜的数小了！";
+				}
+				if (uesrNumber > randomNumber) {
+					lowOrHi.textContent = "你猜的数大了！";
+				}
+			}
+			//猜测次数加一
+			guessCount++;
+			//清空输入框并聚焦
+			guessField.value = "";
+			guessField.focus();
+		}
+		//为submit按钮添加监听事件
+		guessSubmit.addEventListener("click",checkGuess);
+		//定义游戏结束函数
+		function setGameOver() {
+			guessField.disabled = true;
+			guessSubmit.disabled = true;
+			resetButton = document.createElement("button");
+			resetButton.textContent = "开始新游戏";
+			document.body.appendChild(resetButton);
+			resetButton.addEventListener("click",resetGame);
+		}
+		//定义reset函数
+		function resetGame() {
+			guessCount == 1; //次数==1
+			//清空所有内容
+			const allContent = document.querySelectorAll(".resultParas p");
+			for(var i = 0 ; i < allContent.length ; i++){
+				allContent[i].textContent = "";
+			}
+			//input初始化
+			guessField.value = "";
+			guessField.disabled = false;
+			guessSubmit.disabled = false;
+			guessField.focus();
+			//删除restbutton按钮
+			resetButton.parentNode.removeChild(resetButton);
+
+			lastResult.style.backgroundColor = "white";
+
+			randomNumber = Math.floor(Math.random()*100)+1;
+		}
+	</script>
+</body>
+</html>

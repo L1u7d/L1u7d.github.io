@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<button>点击我</button>
+	<p>没有点击</p>
+	<script>
+		let btn = document.querySelector("button");
+		let txt = document.querySelector("p");
+
+		btn.addEventListener("click",myFunction);
+
+		function myFunction() {
+			if (btn.textContent == "点击我") {
+				btn.textContent = "已经点击了";
+				txt.textContent = "你已经点击按钮了";
+			} else {
+				btn.textContent = "点击我";
+				txt.textContent = "你还没有点击按钮";
+			}
+		}
+	</script>
+</body>
+</html>
